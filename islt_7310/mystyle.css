@@ -1,0 +1,37 @@
+ 
+ 
+ 
+ 
+ /* This a comment that the browser would ignore.  */
+
+
+body {background-color: #88ebda;}
+h1 { color: #1d67f0;}
+p { color: #4a87f7;
+    font: sans-serif;
+    font-size: 12pt;
+}
+H3 {
+  width: 300px;
+  border: 10px solid grey;
+  padding: 30px;
+  margin: 10px;
+float: center;
+}
+
+blockquote {
+float: right;
+}
+
+footer {
+       position: absolute;
+        width: 100%;
+       bottom: 0;
+       height: 60px;
+       border-top-width: 5px;
+       border-top-style: dotted;
+       border-top-color: #1d67f0;
+    background-color: #FABFA0;
+    text-align: left;
+    font-size: 8pt;
+    }
