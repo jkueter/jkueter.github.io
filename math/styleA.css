@@ -1,0 +1,83 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+.dropdown {
+    height: 10%;
+}
+
+.container {
+    height: 80%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 0em;
+    grid-template-rows: 15% 35% 35% 15%;
+    grid-template-areas: 
+    "top top"
+    "photoh texth"
+    "photoj textj"
+    "bottom bottom";
+}
+
+.conceptual {
+    grid-area: top;
+    align-items: center;
+    padding-bottom: 5%;
+}
+.halleyphoto {
+    grid-area: photoh;
+    align-items: center;
+    margin-right: 0%;
+}
+.halley {
+    grid-area: texth;
+    margin-left: 0%;
+   
+}
+.jenphoto {
+    grid-area: photoj;
+    align-self: center;
+}
+.jen {
+    grid-area: textj;
+}
+.footer {
+    grid-area: bottom;
+}
+    
+.text {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+#footer {background: teal;
+    height: 10%;
+    text-align: center;
+    font-size: 14px;
+    margin: 0;}
+#copy {
+    text-align: right;
+font-size: 14px;
+}  
+h1 {
+    font-size: 200%;
+    text-align: center;
+    color: blue;
+}
+h2 {
+    font-size: 150%;
+}
+#p1 {
+    text-align: center;
+}
+@@media (max-width: 700px) 
+    .container {
+      grid-template-areas:
+        'top'
+        'photoh'
+        'texth'
+        'photoj' 
+        'textj'
+        'bottom';
+  }
+  
