@@ -1,6 +1,6 @@
 .active {
-    background-color:teal
-    color: blue
+    background-color:teal;
+    color: blue;
 }
 /* this is to make the hamburger not show in the desktop view*/
 #hamburger {
@@ -44,8 +44,7 @@ nav ul li ul{
 }
 
 nav ul li:hover ul{
-    display: block;
-    
+    display: block;  
 }
 
 nav ul li ul li {
@@ -62,11 +61,10 @@ nav ul li ul li a:hover {
 }
  /* hamburger method -  */
         @media only screen and (max-width: 640px) {
-                #hamburger {
+            #hamburger {
                 display: inline-block;        
                 padding-left: 20px;        
-                width: 26px;        
-                float: left;        
+                width: 26px;         
                 font-size: 2em;
             }
            
@@ -78,7 +76,6 @@ nav ul li ul li a:hover {
             }
             nav:hover ul {
                 display: inline-block;
-                float: left;
                 background-color: #560183;
                 padding: 5px;
                 border-right: 0px;

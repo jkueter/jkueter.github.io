@@ -1,0 +1,115 @@
+.menu {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: #999999;
+ }
+   nav ul li a {
+   display: block;
+   color: black;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+ }
+ 
+ /* Change the link color to pink on hover */
+ nav ul li a:hover {
+   background-color: #ff9999;
+ }
+
+ .dropdown {
+   position: absolute;
+   color:#333;
+   display: none;
+
+ }
+
+
+ nav ul li:hover ul {
+display: block;
+
+ }
+
+
+
+/*Hamburger Menu*/
+
+/* [ON BIG SCREENS] */
+/* (A) WRAPPER */
+#hamnavigation {
+   width: 100%;
+   background:white;
+
+   /* Optional */
+   position: sticky;
+   top: 0;
+ }
+ 
+ /* (B) HORIZONTAL MENU ITEMS */
+ nav ul li {display: inline;
+     text-align: center;
+     padding: 10px 10px 10px 10px;
+   }
+ .menu { display: flex; }
+ .menu  {
+   flex-grow: 1;
+   flex-basis: 0;
+   padding: 10px;
+   color: rgb(23, 0, 128);
+   text-decoration: none;
+   text-align: center;
+ }
+ .menu a:hover { background: #ff9999; }
+ 
+ /* (C) HIDE HAMBURGER */
+ #hamnavigation label, #hamburger { display: none; }
+ 
+ /* [ON SMALL SCREENS] */
+ @media screen and (max-width: 768px){
+   /* (A) BREAK INTO VERTICAL MENU */
+   .menu a {
+     box-sizing: border-box;
+     display: block;
+     width: 100%;
+     border-top: 1px solid #333;
+   }
+ .dropdown
+ {display: none;}
+
+   /* (B) SHOW HAMBURGER ICON */
+   #hamnavigation label {
+     display: inline-block;
+     color:#999999;
+     background: #a0208b;
+     font-style: normal;
+     font-size: 1.2em;
+     padding: 10px;
+   }
+ 
+   /* (C) TOGGLE SHOW/HIDE MENU */
+   .menu { display: none; }
+   #hamnavigation input:checked ~ .menu { display: block; }
+ }
+ 
+ /* [DOES NOT MATTER] */
+ html, body {
+   padding: 0;
+   margin: 0;
+   font-family: arial, sans-serif;
+ }
+
+
+
+
+ 
+
+ 
+   
+    
+   
+
+
+
+
+  
