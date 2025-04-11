@@ -1,3 +1,8 @@
+/* Basic page styling*/
+body {
+    padding: 10px 10px 10px 10px;
+}
+
 h1 {
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -7,18 +12,20 @@ p {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(214, 157, 22);
 }
+/* Styling of flexbox*/
 .flex-container {
     display: flex;
     flex-direction: row;
-    background-color: DodgerBlue;
-    width: 70%;
+    background-color: rgb(247, 244, 57);
+    width: 90%;
+    height: 90%;
     justify-content: center;
     align-items: center;
   }
 
-    
+  /* Styling of the Divs inside the flexbok*/  
 .flex-container > div {
-    background-color: #f1f1f1;
+    background-color: #e6afaf;
     width: 40%;
     margin: 10px;
     text-align: center;
@@ -36,13 +43,13 @@ p {
     padding-top: 15px;
   }
 
-/* Flex layout in mobile view*/
+/* Flex layout in mobile view switxhed to vertical*/
 @media screen and (max-width: 759px) {
 
   .flex-container {
     display: flex;
     flex-direction: column;
-    background-color: DodgerBlue;
+    background-color: rgb(92, 165, 239);
   }
 
 }
