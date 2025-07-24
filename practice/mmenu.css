@@ -1,0 +1,83 @@
+.mainnav {
+    display: inline-flex;
+    width: 100%;
+    background-color: aquamarine;
+    display: flex;
+    position: sticky;
+    align-items: center;
+        }
+  /* Links inside the navbar */      
+.navlist
+    {font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    list-style: none;
+    align-content: center;
+    }
+.navlist li {
+        margin-right: 20px;
+        display: inline-block;
+        position: relative;
+    }
+.navlist li a {
+        text-decoration: none;
+        display: block;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: blue;
+        font-size: 18px;
+    }
+            /* Change the color on hover */
+.navlist li a:hover {
+        color: #ffd700;
+    }
+    /* Dropdown content (hidden by default) */
+.ddown {
+    display: none;
+    position: absolute;
+    background-color: #76c8ba;
+    }
+    /* Links inside the dropdown */
+.ddown a {
+    float: none;
+    color: rgb(123, 27, 27);
+    padding: 5px 5px;
+    text-decoration: none;
+    display: inline;
+    text-align: center;
+}   
+/* Show the dropdown menu on hover */
+.droplink:hover .ddown{
+    display: block;
+  } 
+/* this is to make the hamburger not show in the desktop view*/
+#hamburger {
+    display: none;
+}
+/* hamburger method -  */
+@media only screen and (max-width: 640px) {
+    #hamburger {
+        display: inline;        
+        padding-left: 10px;        
+        width: 26px;         
+        font-size: 3em;
+    }
+    .droplink:hover {
+        display: none;
+    }
+    .navlist, nav:active ul {
+        display: none;
+        position: absolute;
+        padding: 20px 20px 20px 0px;
+        top: 20px;
+    }
+    nav:hover .navlist {
+        display: inline;
+        background-color: #81d3c0;
+        padding: 1px;
+        border-right: 0px;
+    }
+    nav:hover .ddown {
+        display: none;
+    }
+
+}

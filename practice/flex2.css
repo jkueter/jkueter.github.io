@@ -1,0 +1,47 @@
+/* (B) HORIZONTAL MENU ITEMS */
+li {
+  color: blue;
+  display: inline;
+  text-align: center;
+  padding: 15px 15px 15px 15px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 15% 15% 60% 10%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Header Header Header"
+    "Navigation Navigation Navigation"
+    "Image Content Content"
+    "Footer Footer Footer";
+}
+/* header styling*/
+.Header { grid-area: Header; 
+    color: cadetblue;
+    text-size-adjust: 70%;
+    text-align: center;
+  }
+
+.Navigation { grid-area: Navigation; 
+  background:teal;
+  padding: 15px 15px 15px 15px;
+  font-size: 150%;
+  text-align: center;
+}
+
+.Image { grid-area: Image;}
+
+.Content { grid-area: Content; }
+
+.Footer { grid-area: Footer; }
+
+
+html, body , .container {
+  height: 100%;
+  margin: 0;
+}
+  
+

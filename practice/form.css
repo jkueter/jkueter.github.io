@@ -1,0 +1,34 @@
+body {
+    background-color: antiquewhite;
+    margin: 20px;
+}
+H1{
+    color: #6b2ee4;
+}
+#myform {
+    border-radius: 8px;
+    background-color: #e79a36;
+    padding: 30px 20px 30px 20px;
+    margin: 0;
+    width: 70%;
+  }
+
+#button{
+    background-color: #4ddca7;
+    border: darkcyan;
+    color: #6b2ee4;
+    padding: 14px 28px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+label {
+    font-size: larger;
+}
+
+input[type=text], input[type=email] {
+    width: 80%;
+}
+
+textarea {
+    width: 70%;
+}
