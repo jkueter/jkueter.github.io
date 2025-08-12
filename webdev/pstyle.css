@@ -1,0 +1,56 @@
+/* special font */
+@font-face { 
+
+    font-family: ultraregular; 
+    
+    src: url(ultraregular.ttf); 
+    
+    }
+    blockquote {font-family: ultraregular, serif; }
+
+
+
+/* Flex Layout*/
+.flexbox {
+    display: flex; /* Make the container a flex container */
+   flex-wrap: wrap; /* Allow flex items to wrap onto new lines */
+    flex-direction: row;
+    background-color: #8bf4f3;
+    width: 90%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto; /* Allow margins to be flexible */
+    margin-right: auto;
+    padding: 5px;
+  }
+
+ .flex-container > div {
+    background-color: #e6afaf;
+    width: 40%;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px; /* Sets height of each row */
+    font-size: 30px;
+  }
+
+  .discourse, .ece, .tech, .pd {
+    flex: 1 0 45%; /* amount of container used */
+    margin: 10px; 
+    border: .1em dotted #560183;
+    padding: 10px;
+  }
+  .phone, .email {
+    width: 20px;
+    height: auto;
+  }
+
+  /* Flex layout in mobile view switxhed to vertical*/
+@media screen and (max-width: 759px) {
+
+  .flexbox {
+    display: flex;
+    flex-direction: column;
+    background-color: #79f6e1;
+  }
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<!--
+
+Title: Dr. Jennifer Kueter
+Use: practice
+Author: Jennifer Kueter
+School/Term: Mizzou 2025
+Developed: 7/16/25
+Tested: 
+-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dr. Jennifer Kueter</title>
+
+               <link rel="stylesheet" href="style.css">
+               <link rel="stylesheet" href="nav3.css">
+               <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<style>
+#myform {
+    padding: 10px;
+    max-width: 90%;   /* Limits form width */
+    margin: 0 auto;     /* Centers horizontally */
+    text-align: left;   /* Keeps text aligned left inside */
+}
+#HD {
+   background-image: url(grid.png);
+   padding: 10px;
+}
+/* All form fields EXCEPT honorific dropdown */
+input[type="text"],
+input[type="email"],
+textarea,
+select:not(#honorifics) {
+  width: 90%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #3c9174;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+textarea {
+  height: 120px; /* Adjust height */
+  resize: vertical; /* Let user drag to make taller if needed */
+}
+
+/* Keep honorific dropdown small */
+#honorifics {
+  width: auto;              /* Small width for short text */
+  padding: 6px;
+  font-size: 14px;
+  border: 2px solid #218981;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Focus effect */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #0a4c39;
+  outline: none;
+}
+
+#button {
+    background-color: #8d908f;
+    border-radius: 5px;
+    border: dotted 1px black;
+}
+form {
+    background-color: #218981;
+    border-radius: 5px;
+    padding: 10px;
+}
+</style>
+</head>
+
+<body>
+<header>
+       <!-- Navigation-->
+ <nav class="nav-container">
+  <input type="checkbox" id="menu-toggle" />
+  
+  <div class="nav-top">
+    <img class="logo" src="jennifer.png" alt="logo">
+    <label for="menu-toggle" id="hamburger">&#9776;</label>
+  </div>
+
+  <ul class="navMenu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+   <li class="dropdown">
+      <a href="Experience.html">Experience</a>
+      <ul class="mobileHide">
+        <li><a href="#teacher">Elementary Teacher</a></li>
+        <li><a href="#doctorate">STEM doctorate</a></li>
+        <li><a href="#college">College Professor</a></li>
+        <li><a href="#mentor">Mentor & Supervisor</a></li>
+      </ul>
+    </li>
+    <li><a href="passions.html">Passions</a></li>
+    <li><a href="contact.html">Contact Me</a></li>
+  </ul>
+</nav>
+<h1 id="HD"> Contact me!</h1>
+<main>
+ <h1>Complete this form</h1>
+  <div id="myform">
+<form action="mailto:Kueterj@eumsystem.edu?Subject=Here%20is%20my%20subject" method="post" enctype="text/plain">
+ <!-- dropdown menu-->
+<select name="honorifics" id="honorifics">
+  <option value="Mr.">Mr.</option>
+  <option value="Mrs.">Mrs.</option>
+  <option value="Miss">Miss</option>
+  <option value="Doctor">Dr.</option> 
+   <option value="NA">NA</option>
+</select> <br>
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" value="" placeholder="Your name..."><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" value="" placeholder="Complete email"><br><br>
+
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" rows="15" placeholder="Write me a message"></textarea>
+ <!-- Multiple choice-->
+  <p>What is your role?</p>
+  <input type="radio" id="teacher" name="role" value="teacher">
+  <label for="teacher">Teacher</label><br>
+  <input type="radio" id="professor" name="role" value="professor">
+  <label for="professor">Professor</label><br>
+  <input type="radio" id="community" name="role" value="community member">
+  <label for="community member">Community Member</label><br>
+  <input type="radio" id="Student" name="role" value="student">
+  <label for="student">Student</label><br>
+  <input type="radio" id="other" name="role" value="other">
+  <label for="other">Other</label><br> <br>
+
+  <input type="submit" value="Submit" id="button">
+</form>
+
+</main>
+   <!-- Footer-->
+    <footer> 
+   
+    <div class="Footer">
+        <footer>
+             <div class="footer-content">
+         <span>Website creator: Jennifer Kueter   &copy;2021</span>
+         <span><a href="mailto:kueterfam@gmail.com">Kueterfam@gmail.com</a>
+            <img class="email" src="mail1.png" alt="mail image" width="15px" height="auto"> </span>
+            <span><a href="tel:+19077484576">+1 907 748 4576</a>  
+            <img class="phone" src="phone1.png" alt="phone image" width="15px" height="auto"></span> 
+        </div>
+        </footer>
+</footer>
+</body>
+</html>

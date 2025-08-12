@@ -1,0 +1,123 @@
+/* -------- DESKTOP -------- */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: teal;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+  height: 80px;
+  overflow: hidden;
+}
+
+nav .logo {
+  width: 100px;
+  height: auto;
+  max-height: 60px;
+  max-width: 80%;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger (hidden on desktop) */
+#hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Main nav menu */
+.navMenu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.navMenu a {
+  color: #cdcccc;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+}
+
+.navMenu a:hover {
+  background-color: #006d6d;
+  border-radius: 4px;
+}
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown */
+.mobileHide {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #c3f4ef;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .mobileHide {
+  display: block;
+}
+
+/* -------- MOBILE -------- */
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+  .logo {
+    width: 100px;
+  }
+.nav-top {
+  display: flex;
+  justify-content: space-between; /* puts logo left, hamburger right */
+  align-items: center;
+  width: 100%;
+}
+  .navMenu {
+  display: none;          /* hidden by default on mobile */
+  flex-direction: column; /* stack links vertically */
+  width: 100%;            /* take full width */
+  padding: 0;
+  margin: 10px 0 0 0;
+  align-items: flex-end; /* align menu items to right */
+  text-align: right;
+}
+
+
+  /* ✅ THIS is what toggles it on click */
+  #menu-toggle:checked ~ .navMenu {
+    display: flex;
+  }
+
+  .mobileHide {
+    position: static;
+    box-shadow: none;
+    display: none !important;
+  }
+
+  .dropdown:hover
+  .dropdown:focus-within .mobileHide {
+    display: block;
+  }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<!--
+
+Title: Dr. Jennifer Kueter
+Use: practice
+Author: Jennifer Kueter
+School/Term: Mizzou 2025
+Developed: 7/16/25
+Tested: 
+-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dr. Jennifer Kueter</title>
+
+               <link rel="stylesheet" href="style.css">
+               <link rel="stylesheet" href="nav3.css">
+               <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+<style>
+#hero {
+    width: 100%;
+    min-height: 100vh; /* Use min-height instead of fixed height */
+    background-image: url(mathtalk.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+    display: flex; /* So we can center content vertically */
+    align-items: center;
+    justify-content: center;
+    color: brown;
+    font-weight: 300;
+}
+ .hero-container{
+    width: 95%;
+    height: 80%; 
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+        }
+#intro {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    color: teal;
+    font-family: Arial, Helvetica, sans-serif
+    }
+#meet {
+    color: #6c3eeb;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    }
+    #herocontent {
+    color: #5b5959;
+    font-size: 1.2rem;
+    max-width: 45%;
+    }
+ #herobutton {
+        text-decoration: none;
+        display: inline-block;
+        background-color: brown;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        padding: .8em;
+        color: #f3f3c2;
+    
+ }
+@media screen and (max-width: 786px) {
+    #intro {
+        font-size: 1.5rem;
+    }
+     #hero {
+    background-position: 40% center;
+}
+}
+</style>
+</head>
+
+<body>
+    <header>
+       <!-- Navigation-->
+ <nav class="nav-container">
+  <input type="checkbox" id="menu-toggle" />
+  
+  <div class="nav-top">
+    <img class="logo" src="jennifer.png" alt="logo">
+    <label for="menu-toggle" id="hamburger">&#9776;</label>
+  </div>
+
+  <ul class="navMenu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li class="dropdown">
+      <a href="Experience.html">Experience</a>
+      <ul class="mobileHide">
+        <li><a href="#teacher">Elementary Teacher</a></li>
+        <li><a href="#doctorate">STEM doctorate</a></li>
+        <li><a href="#college">College Professor</a></li>
+        <li><a href="#mentor">Mentor & Supervisor</a></li>
+      </ul>
+    </li>
+    <li><a href="passions.html">Passions</a></li>
+    <li><a href="contact.html">Contact Me</a></li>
+  </ul>
+</nav>
+  </header>  
+<main>
+    <section id="hero">
+        <div class="hero-container">
+            <div class="heroinfo"> 
+                <h1 id="intro">Meet Dr. Jennifer Kueter</h1>
+                <p id="herocontent"> After almost 30 years of teaching in elementary school, I retired and thought I was
+                    ready to leave education.  But I was wrong!  I still have a passion and desire to improve education
+                not only for the students who deserve the best learning environment possible, but also for the teachers
+            who have dedicated their lives to make a difference. </p>
+                 <h2 id="meet">Come explore my passions!</h2>
+                <a id="herobutton" href="passions.html">Click Me</a>
+            </div>
+    </div>
+    </section>
+</main>
+   <!-- Footer-->
+    <footer> 
+   
+    <div class="Footer">
+        <footer>
+             <div class="footer-content">
+         <span>Website creator: Jennifer Kueter   &copy;2021</span>
+         <span><a href="mailto:kueterfam@gmail.com">Kueterfam@gmail.com</a>
+            <img class="email" src="mail1.png" alt="mail image" width="15px" height="auto"> </span>
+            <span><a href="tel:+19077484576">+1 907 748 4576</a>  
+            <img class="phone" src="phone1.png" alt="phone image" width="15px" height="auto"></span> 
+        </div>
+        </footer>
+</footer>
+</body>
+</html>

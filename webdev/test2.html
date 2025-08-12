@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dropdown Mobile Fix</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: teal;
+      padding: 10px 20px;
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+
+    #hamburger {
+      display: none;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .navMenu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navMenu li {
+      position: relative;
+    }
+
+    .navMenu a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      display: block;
+    }
+
+    .navMenu a:hover {
+      background-color: #006d6d;
+      border-radius: 4px;
+    }
+
+    /* Submenu hidden by default */
+    .mobileHide {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      min-width: 150px;
+      z-index: 1000;
+      flex-direction: column;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .mobileHide li a {
+      color: black;
+      padding: 10px;
+      text-decoration: none;
+    }
+
+    .mobileHide li a:hover {
+      background-color: #eee;
+    }
+
+    /* Desktop: show submenu on hover */
+    .dropdown:hover .mobileHide {
+      display: flex;
+    }
+
+    /* -------- MOBILE -------- */
+    @media (max-width: 768px) {
+      #hamburger {
+        display: block;
+      }
+
+      .navMenu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+      }
+
+      /* Toggle nav menu on checkbox */
+      #menu-toggle:checked + #hamburger + .navMenu {
+        display: flex;
+      }
+
+      /* Reset dropdown for mobile */
+      .mobileHide {
+        display: none !important;
+        position: static;
+        box-shadow: none;
+      }
+
+      /* Only show submenu if user hovers or focuses (tap triggers focus) */
+      .dropdown:hover,
+      .dropdown:focus-within .mobileHide {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" id="hamburger">&#9776;</label>
+
+  <ul class="navMenu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li class="dropdown">
+      <a href="#">Learn</a>
+      <ul class="mobileHide">
+        <li><a href="#">Goal 1</a></li>
+        <li><a href="#">Goal 2</a></li>
+        <li><a href="#">Goal 3</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Resources</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+   /* Basic Styling*/ 
+
+h3 {
+    color: #177959;
+    font-weight: 400;
+}
+
+.pdf {
+    width: 100%;
+    border: black dotted 2px;
+}  
+.excontainer {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: auto;
+    padding: 0 1rem;
+    grid-gap: 1em;
+    align-items: center;        /* vertically centers grid items */
+    justify-items: center;      /* horizontally centers grid items */
+    grid-template-areas: 
+        "teacher teacher textra"
+        "docextra doctorate doctorate"
+        "college college cpextra"
+        "menextra mentor mentor";
+}
+.excontainer > div {
+  margin-bottom: 2rem;
+}
+.teacher {
+    grid-area: teacher;
+    border: 2px dotted #000000;
+}
+.textra {
+    grid-area: textra;
+    display: block;
+    width: 100%;
+    height: 90%;
+    gap: 0;
+    border: 2px dotted #000000;
+}
+
+.doctorate {
+    grid-area: doctorate;
+    border: 2px dotted #000000; 
+}
+.docextra {
+     grid-area: docextra;
+    border: 2px dotted #000000; 
+}
+.college {
+    grid-area: college;
+    border: 2px dotted #000000;
+}
+.cpextra {
+    grid-area: cpextra;
+    border: 2px dotted #000000;
+}
+.mentor {
+    grid-area: mentor;
+    border: 2px dotted #000000;
+}
+.menextra {
+    grid-area: menextra;
+    justify-content: center;
+    width: 100%;
+}
+.menextra img {
+    width: 100%
+}
+
+@media (max-width: 760px) {
+    .excontainer {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "teacher"
+            "textra"
+            "doctorate"
+            "docextra"
+            "college"
+            "cpextra"
+            "mentor"
+            "menextra";
+    }
+}
