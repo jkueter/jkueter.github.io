@@ -48,11 +48,7 @@ h4 {color: #560183;
   align-items: center;
   gap: 0.5rem;
 }
-.footer-content img {
-    width: 15px;
-    height: auto;
-    vertical-align: middle; /* keeps it aligned nicely with text */
-}
+
   #resume {
     background-color: #00ffff;
     float: right;
