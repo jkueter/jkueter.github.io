@@ -1,0 +1,101 @@
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; }
+
+/* Navbar */
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: flex-end; /* push menu to the right */
+  align-items: center;
+  background: #ea3d3d;
+  padding: 10px 20px;
+}
+
+/* Hide the menu toggle checkbox */
+.nav-toggle { display: none; }
+
+/* Hamburger */
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  color: #f8f5f5;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Nav links (desktop) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a, 
+.dropdown > label {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color .2s;
+  cursor: pointer;
+}
+
+.nav-links a:hover,
+.dropdown > label:hover { color: #55020d; }
+
+/* Dropdown */
+.dropdown { position: relative; }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ecacac;
+  min-width: 90px;   /* Box size */
+  border-radius: 5px;
+  padding: 3px 0;
+  list-style: none;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.dropdown-content li a:hover {
+  background: #00cfff;
+  color: #333;
+}
+
+/* Show dropdown when checkbox checked */
+.dropdown-toggle { display: none; }
+.dropdown-toggle:checked ~ .dropdown-content { display: block; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .menu-icon { display: block; }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    flex-direction: column;
+    width: 100%;
+    background: #fdb2b2;
+    transition: left .3s ease;
+  }
+  .nav-links li { border-top: 1px solid rgba(255,255,255,.1); }
+  .nav-links li:first-child { border-top: none; }
+  .nav-links a, .dropdown > label {
+    display: block;
+    padding: 12px 18px;
+  }
+  /* Show menu when hamburger checked */
+  .nav-toggle:checked ~ .nav-links { right: 0; }
+
+  /* Hide dropdown entirely in mobile */
+  .dropdown-content { display: none !important; }
+  .dropdown > label::after { content: ""; }
+}
