@@ -1,0 +1,7 @@
+img:hover {
+    /*increase the size of the image*/
+   transform: scale(1.5)}
+
+   footer{
+    background-image: url('bubbles.jpg');
+   }
