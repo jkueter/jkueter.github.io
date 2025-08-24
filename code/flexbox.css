@@ -1,0 +1,79 @@
+/* Basic page styling */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(14, 151, 108);
+  margin: 20px 0;
+}
+
+#intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 10px auto;
+  font-style: italic;
+  font-size: 18px;
+  color: #00ffff;
+}
+
+p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(214, 157, 22);
+}
+
+/* Styling of flexbox */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(247, 244, 57);
+  width: 90%;
+  margin: 20px auto;  /* centers + gives top/bottom space */
+  padding: 10px;      /* adds space inside container */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Styling of the divs inside the flexbox */  
+.flex-container > div {
+  background-color: #e6afaf;
+  width: 40%;
+  margin: 10px;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 30px;
+}
+
+.sample-img {
+  width: 60%;
+  height: auto;
+  padding-top: 15px;
+}
+
+.video-resume {
+  width: 60%;
+  height: auto;
+  padding-top: 15px;
+}
+
+/* Flex layout in mobile view switched to vertical */
+@media screen and (max-width: 759px) {
+  .flex-container {
+    flex-direction: column;
+    background-color: rgb(92, 165, 239);
+  }
+}
+
+/* Footer styling */
+footer {
+  background-color: aqua;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(91, 58, 18);
+  margin: 10px;
+  padding: 10px;
+  width: 100%;
+}
