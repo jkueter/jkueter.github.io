@@ -1,0 +1,136 @@
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f0f1b2;
+  color: #333;
+}
+
+.container {
+  max-width: 1800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+.Header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #447e46;
+}
+
+/* Navigation Bar */
+.Navigation .navbar {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  background-color: #1a5030;
+  margin-bottom: 20px;
+  padding: 0;
+  text-align: center;
+}
+
+.Navigation .navbar li {
+  padding: 10px 0;
+}
+
+.Navigation .navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.Navigation .navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Main content using CSS Grid */
+.MainContent {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* One column */
+  grid-template-rows: auto auto; /* Two rows */
+  gap: 20px;
+  align-items: start;
+}
+/* styles div*/
+.Image {
+  grid-column: 1;
+  grid-row: 1;
+}
+/* styles content in div*/
+.Image img {
+  width: 80%;
+  max-width: 250px;
+  border-radius: 8px;
+}
+/* styles div*/
+.Content {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center; 
+}
+/* styles div*/
+.Quote {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  text-align: center;
+  margin-top: 10px;
+}
+/* styles content in div*/
+.Quote blockquote {
+  font-style: italic;
+  font-size: 24px;
+  padding-left: 10px;
+  color: #555;
+  display: inline-block;
+}
+/* Footer */
+.Footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #02360f;
+}
+
+.Footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+.Footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 700px) {
+  .MainContent {
+    grid-template-columns: 1fr;      /* One column */
+    grid-template-rows: auto auto auto; /* Three rows */
+  }
+
+  .Image {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .Content {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .Quote {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
+
+
+
+
